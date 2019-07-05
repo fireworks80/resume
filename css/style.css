@@ -1,0 +1,95 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.a11y {
+  position: absolute;
+  top: auto;
+  left: -9999em;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+.wrap {
+  display: flex;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro {
+  outline: 1px dashed red;
+  width: 30%;
+  color: #fff;
+  background-color: #404042;
+}
+.intro__img {
+  outline: 1px dashed red;
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+  margin: 6.25rem auto 1.25rem;
+  border-radius: 50%;
+}
+
+.name {
+  margin-bottom: 0.625rem;
+  font-size: 2.125rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.job {
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #eb1b33;
+  text-align: center;
+}
+
+.info {
+  margin-top: 3.125rem;
+  padding: 0 2.5rem;
+}
+.info__tit {
+  position: relative;
+  margin-bottom: 2.1875rem;
+  padding-bottom: 1.5625rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  border-bottom: 1px solid #fff;
+}
+.info__tit::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 5px;
+  background-color: #eb1b33;
+  content: "";
+}
+.info__desc {
+  font-size: 1.625rem;
+  line-height: 1.4;
+}
+
+.detail {
+  width: 70%;
+  outline: 1px dashed red;
+}
+
+/*# sourceMappingURL=style.css.map */

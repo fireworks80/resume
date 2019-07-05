@@ -1,0 +1,13 @@
+@mixin a11y {
+  position: absolute;
+  top: auto;
+  left: -9999em;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+@mixin debug($color: red) {
+  outline: 1px dashed $color;
+}

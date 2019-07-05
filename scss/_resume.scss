@@ -1,0 +1,73 @@
+.wrap {
+  display: flex;
+  max-width: 960px;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+.intro {
+  @include debug;
+  width: 30%;
+  color: #fff;
+  background-color: $color-dark;
+
+  &__img {
+    @include debug;
+    overflow: hidden;
+    width: 140px;
+    height: 140px;
+    margin: rem(100) auto rem(20);
+    border-radius: 50%;
+  }
+}
+
+.name {
+  margin-bottom: rem(10);
+  font-size: rem(34);
+  font-weight: 700;
+  text-align: center;
+}
+
+.job {
+  font-size: rem(26);
+  font-weight: 600;
+  line-height: 1.4;
+  color: $color-red;
+  text-align: center;
+}
+
+.info {
+  margin-top: rem(50);
+  padding: 0 rem(40);
+
+  &__tit {
+    position: relative;
+    margin-bottom: rem(35);
+    padding-bottom: rem(25);
+    font-size: rem(30);
+    font-weight: 700;
+    border-bottom: 1px solid #fff;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 80px;
+      height: 5px;
+      background-color: $color-red;
+      content: '';
+    }
+  }
+
+  &__desc {
+    font-size: rem(26);
+    line-height: 1.4;
+  }
+}
+
+.detail {
+  width: 70%;
+  @include debug;
+}
