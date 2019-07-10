@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Resume: SEUNG-CHUL HAN</title>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
-    <link rel="stylesheet" href="./css/reset-eric.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset-eric.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <article class="wrap">
+    <article class="wrap" id="js-app">
       <h1 class="a11y">RESUME - SEUNG-CHUL HAN</h1>
       <section class="intro">
         <h2 class="a11y">Introduce</h2>
@@ -21,77 +24,56 @@
         <h3 class="name">SEUNG-CHUL HAN</h3>
         <p class="job">UI DEVELOPER</p>
 
-        <dl class="info">
-          <dt class="info__tit">PROFILE</dt>
-          <dd class="info__desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            libero quibusdam vero alias atque sequi quo dignissimos quis eum
-            pariatur temporibus laudantium ullam asperiores, quia at rem
-            excepturi! Ullam, molestiae?
-          </dd>
-        </dl>
-        <dl class="info">
-          <dt class="info__tit">CONTACT</dt>
-          <dd class="info__desc">
-            <ul>
-              <li>
-                <a href="mailto:fireworks80@naver.com"
-                  >fireworks80@naver.com</a
-                >
-              </li>
-              <li>tel: 01071186655</li>
-              <li>
-                <a href="https://fireworks80.github.com"
-                  >fireworks80.github.com</a
-                >
-              </li>
+        <dl class="column">
+          <dt class="column__tit contact">CONTACT</dt>
+          <dd class="column__desc">
+            <ul class="contact__list">
+              <li class="contact__item" v-for="con in contact">{{con}}</li>
             </ul>
           </dd>
         </dl>
-        <dl>
-          <dt>SKILL</dt>
+        <dl class="column skill">
+          <dt class="column__tit">SKILL</dt>
           <dd>
             <ul>
-              <li><em>html</em> <progress value="90" max="100"></progress></li>
-              <li><em>css</em> <progress value="90" max="100"></progress></li>
-              <li><em>scss</em> <progress value="90" max="100"></progress></li>
-              <li><em>js</em> <progress value="90" max="100"></progress></li>
-              <li><em>vue</em> <progress value="90" max="100"></progress></li>
-              <li><em>photoshop</em> <progress value="40" max="100"></progress></li>
+              <li class="skill__item" v-for="skill in skills">
+                <em class="skill__name">{{skill.kind}}</em>
+                <progress :value="skill.point" max="100"></progress>
+              </li>
             </ul>
           </dd>
         </dl>
       </section>
       <section class="detail">
-        <h2>details</h2>
+        <h2 class="a11y">details</h2>
 
-        <dl>
-          <dt>education</dt>
+        <dl class="column career">
+          <dt class="column__tit">CAREER</dt>
           <dd>
             <ol>
-              <li><span>1996.3 - 1999.2</span> - OO 고등학교</li>
-              <li><span>1996.3 - 1999.2</span> - OO 고등학교</li>
-              <li><span>1996.3 - 1999.2</span> - OO 고등학교</li>
+              <li class="career__item" v-for="career in careers">
+                <time class="career__date">{{career.date}}</time>
+                <p class="career__desc">
+                  <strong>{{career.company}}</strong>
+                  <br>
+                  <span>{{career.work}}</span>
+                </p>
+              </li>
             </ol>
           </dd>
         </dl>
-        <dl>
-          <dt>experience</dt>
+        <dl class="column">
+          <dt class="column__tit">INTRODUCE</dt>
           <dd>
-            <ol>
-              <li><span>1996.3 - 1999.2</span> - OO 고등학교</li>
-              <li><span>1996.3 - 1999.2</span> - OO 고등학교</li>
-              <li><span>1996.3 - 1999.2</span> - OO 고등학교</li>
-            </ol>
-          </dd>
-        </dl>
-        <dl>
-          <dt>introduction</dt>
-          <dd>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum autem architecto explicabo beatae eaque aut nostrum numquam deleniti eius quam, ut saepe, obcaecati ratione officia impedit dicta distinctio totam voluptatum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+            autem architecto explicabo beatae eaque aut nostrum numquam deleniti
+            eius quam, ut saepe, obcaecati ratione officia impedit dicta
+            distinctio totam voluptatum.
           </dd>
         </dl>
       </section>
     </article>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./js/resume.js"></script>
   </body>
 </html>

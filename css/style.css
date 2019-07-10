@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -14,6 +19,10 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: #000;
+}
+
 .a11y {
   position: absolute;
   top: auto;
@@ -24,9 +33,36 @@ img {
   clip: rect(0, 0, 0, 0);
 }
 
+.column {
+  margin-top: 5rem;
+  padding: 0 4rem;
+}
+.column__tit {
+  position: relative;
+  margin-bottom: 3.5rem;
+  padding-bottom: 2.5rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  border-bottom: 1px solid #fff;
+}
+.column__tit::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 5px;
+  background-color: #eb1b33;
+  content: "";
+}
+.column__desc {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
 .wrap {
   display: flex;
   max-width: 960px;
+  min-height: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -34,62 +70,84 @@ img {
 .intro {
   outline: 1px dashed red;
   width: 30%;
+  min-height: 100%;
+  padding-bottom: 3rem;
   color: #fff;
   background-color: #404042;
 }
 .intro__img {
-  outline: 1px dashed red;
   overflow: hidden;
   width: 140px;
   height: 140px;
-  margin: 6.25rem auto 1.25rem;
+  margin: 5rem auto 2rem;
   border-radius: 50%;
 }
 
 .name {
-  margin-bottom: 0.625rem;
-  font-size: 2.125rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
   font-weight: 700;
   text-align: center;
 }
 
 .job {
-  font-size: 1.625rem;
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.4;
   color: #eb1b33;
   text-align: center;
 }
 
-.info {
-  margin-top: 3.125rem;
-  padding: 0 2.5rem;
+.contact__item {
+  display: flex;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
 }
-.info__tit {
-  position: relative;
-  margin-bottom: 2.1875rem;
-  padding-bottom: 1.5625rem;
-  font-size: 1.875rem;
-  font-weight: 700;
-  border-bottom: 1px solid #fff;
+.contact__item a {
+  color: inherit;
 }
-.info__tit::before {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 80px;
-  height: 5px;
-  background-color: #eb1b33;
-  content: "";
+
+.skill__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
 }
-.info__desc {
-  font-size: 1.625rem;
-  line-height: 1.4;
+.skill__name {
+  width: 3rem;
+  font-size: 1.4rem;
 }
 
 .detail {
   width: 70%;
-  outline: 1px dashed red;
+  padding-top: 0.5rem;
+}
+.detail .info__tit {
+  border-color: #404042;
+}
+
+.career {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.career__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.career__date, .career__desc {
+  flex: 1 0 auto;
+}
+.career__date {
+  width: 40%;
+}
+.career__desc {
+  width: 60%;
+}
+.career__desc strong {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
