@@ -9,7 +9,7 @@
 }
 // info =============================================================
 .intro {
-  @include debug;
+  // @include debug;
   width: 30%;
   min-height: 100%;
   padding-bottom: rem(30);
@@ -57,19 +57,13 @@
 
 // skill ===========================
 .skill {
-  &__item {
-    // @include debug;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: rem(5);
-    padding-left: rem(10);
-  }
 
   &__name {
-    // display: inline-block;
-    width: rem(30);
-    font-size: rem(14);
+    // @include debug;
+    display: inline-block;
+    width: rem(50);
+    font-size: rem(18);
+    line-height: 1.4;
   }
 }
 
@@ -101,14 +95,39 @@
   }
 
   &__date {
-    width: 40%;
+    width: 30%;
   }
 
   &__desc {
-    width: 60%;
+    width: 70%;
+  }
 
-    strong {
-      font-weight: 700;
+  &__company {
+    font-size: rem(20);
+    font-weight: 700;
+  }
+
+  &__job {
+    display: inline-block;
+    margin-top: rem(5);
+    margin-left: rem(15);
+    font-size: rem(12);
+    vertical-align: top;
+  }
+
+  &__project {
+    margin-left: rem(15);
+    margin-top: rem(20);
+    font-size: rem(12);
+    line-height: 1.4;
+
+    li {
+      margin-bottom: rem(10);
     }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-left: rem(10);
   }
 }

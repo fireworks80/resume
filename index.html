@@ -22,53 +22,57 @@
         </figure>
 
         <h3 class="name">SEUNG-CHUL HAN</h3>
-        <p class="job">UI DEVELOPER</p>
+        <p class="job">FRONT END</p>
 
         <dl class="column">
           <dt class="column__tit contact">CONTACT</dt>
           <dd class="column__desc">
             <ul class="contact__list">
-              <li class="contact__item" v-for="con in contact">{{con}}</li>
+              <li class="contact__item" v-for="con in contact">
+                <a v-if="con.title === 'email'" :href="'mailto:' + con.url">{{con.title}}</a>
+                <a v-else :href="con.url">{{con.title}}</a>
+              </li>
             </ul>
           </dd>
         </dl>
         <dl class="column skill">
           <dt class="column__tit">SKILL</dt>
           <dd>
-            <ul>
-              <li class="skill__item" v-for="skill in skills">
-                <em class="skill__name">{{skill.kind}}</em>
-                <progress :value="skill.point" max="100"></progress>
-              </li>
-            </ul>
+            <span class="skill__name" v-for="skill in skills"
+              ><img :src="createImg(skill)" alt=""
+            /></span>
           </dd>
         </dl>
       </section>
       <section class="detail">
         <h2 class="a11y">details</h2>
 
+        <dl class="column">
+          <dt class="column__tit">EDUCATION</dt>
+          <dd class="column__desc">
+            2007.2 충북 영동대학교 시각디자인 졸업.
+          </dd>
+        </dl>
+
         <dl class="column career">
           <dt class="column__tit">CAREER</dt>
           <dd>
             <ol>
               <li class="career__item" v-for="career in careers">
-                <time class="career__date">{{career.date}}</time>
-                <p class="career__desc">
-                  <strong>{{career.company}}</strong>
-                  <br>
-                  <span>{{career.work}}</span>
-                </p>
+                <time class="career__date">{{ career.date }}</time>
+                <div class="career__desc">
+                  <p>
+                    <strong class="career__company">{{ career.company }}</strong
+                    ><span class="career__job">{{ career.work }}</span>
+                  </p>
+                  <ul class="career__project">
+                    <li v-for="project in career.projects">
+                      <p>{{project.title}} <a class="career__link" v-if="project.url" :href="project.url" target="_blank">[url]</a><a class="career__link"  v-if="project.source" :href="project.source" target="_blank">[source]</a></p>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ol>
-          </dd>
-        </dl>
-        <dl class="column">
-          <dt class="column__tit">INTRODUCE</dt>
-          <dd>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-            autem architecto explicabo beatae eaque aut nostrum numquam deleniti
-            eius quam, ut saepe, obcaecati ratione officia impedit dicta
-            distinctio totam voluptatum.
           </dd>
         </dl>
       </section>

@@ -10,6 +10,10 @@
     font-weight: 700;
     border-bottom: 1px solid #fff;
 
+    @at-root & {
+      border-color: $color-gray;
+    }
+
     &::before {
       position: absolute;
       left: 0;

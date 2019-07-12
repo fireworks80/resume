@@ -45,6 +45,10 @@ a {
   font-weight: 700;
   border-bottom: 1px solid #fff;
 }
+.column__tit {
+  border-color: #a5a5a5;
+}
+
 .column__tit::before {
   position: absolute;
   left: 0;
@@ -68,7 +72,6 @@ a {
 }
 
 .intro {
-  outline: 1px dashed red;
   width: 30%;
   min-height: 100%;
   padding-bottom: 3rem;
@@ -108,16 +111,11 @@ a {
   color: inherit;
 }
 
-.skill__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  padding-left: 1rem;
-}
 .skill__name {
-  width: 3rem;
-  font-size: 1.4rem;
+  display: inline-block;
+  width: 5rem;
+  font-size: 1.8rem;
+  line-height: 1.4;
 }
 
 .detail {
@@ -141,13 +139,34 @@ a {
   flex: 1 0 auto;
 }
 .career__date {
-  width: 40%;
+  width: 30%;
 }
 .career__desc {
-  width: 60%;
+  width: 70%;
 }
-.career__desc strong {
+.career__company {
+  font-size: 2rem;
   font-weight: 700;
+}
+.career__job {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+  font-size: 1.2rem;
+  vertical-align: top;
+}
+.career__project {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.career__project li {
+  margin-bottom: 1rem;
+}
+.career__link {
+  display: inline-block;
+  margin-left: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
