@@ -37,7 +37,7 @@ new Vue({
               'https://github.com/fireworks80/fireworks80.github.io/tree/master/personal/portfolio/Uplus-drawing'
           },
           {
-            title: 'vue cli 실무 prototype 제작 - side project',
+            title: 'vue cli prototype 제작 - side project',
             url: '',
             source:
               'https://github.com/fireworks80/study-vue/tree/master/use-vue-head-og'
@@ -46,6 +46,11 @@ new Vue({
             title: 'vue component 페이지 인터렉션 - side project',
             url: '',
             source: 'https://github.com/fireworks80/artist-animation-vue-clone'
+          },
+          {
+            title: 'playstation 구매페이지 clone - side project',
+            url: '',
+            source: 'https://github.com/fireworks80/playstation-vue-cli'
           },
           {
             title: '뉴스레터 생성기 - side project',
