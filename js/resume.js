@@ -28,7 +28,7 @@ new Vue({
           {
             title: '폭스바겐 아테온 마이크로 사이트 퍼블리싱, UI 인터렉션',
             url: 'https://arteon.vwkr.co.kr/studio',
-            source: ''
+            source: 'https://github.com/fireworks80/arteon'
           },
           {
             title: 'lg U+ 이벤트 퍼블리싱, animation, front-end 개발',
