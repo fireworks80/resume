@@ -17,10 +17,7 @@ new Vue({
       'sass.svg',
       'js.svg',
       'jquery.svg',
-      'vue.png',
-      'nodejs.svg',
-      'mysql.svg',
-      'php.png'
+      'vue.png'
     ],
     careers: [
       {
