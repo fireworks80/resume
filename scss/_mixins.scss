@@ -11,3 +11,9 @@
 @mixin debug($color: red) {
   outline: 1px dashed $color;
 }
+
+@mixin respond($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}

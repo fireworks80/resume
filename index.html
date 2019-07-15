@@ -37,7 +37,7 @@
         </dl>
         <dl class="column skill">
           <dt class="column__tit">TECHNICAL SKILL</dt>
-          <dd>
+          <dd class="skill__items">
             <span class="skill__name" v-for="skill in skills"
               ><img :src="createImg(skill)" alt=""
             /></span>
@@ -67,7 +67,7 @@
                   </p>
                   <ul class="career__project">
                     <li v-for="project in career.projects">
-                      <p>{{project.title}} <a class="career__link" v-if="project.url" :href="project.url" target="_blank">[url]</a><a class="career__link"  v-if="project.source" :href="project.source" target="_blank">[github]</a></p>
+                      <p><span class="career__txt">{{project.title}}</span><a class="career__link" v-if="project.url" :href="project.url" target="_blank">[url]</a><a class="career__link"  v-if="project.source" :href="project.source" target="_blank">[github]</a></p>
                     </li>
                   </ul>
                 </div>

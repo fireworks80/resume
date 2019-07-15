@@ -6,6 +6,11 @@
     left: auto;
     right: auto;
   }
+
+  @include respond($width-tablet) {
+    display: block;
+    padding-bottom: rem(100);
+  }
 }
 // info =============================================================
 .intro {
@@ -23,6 +28,16 @@
     height: 140px;
     margin: rem(50) auto rem(20);
     border-radius: 50%;
+  }
+
+  @include respond($width-tablet) {
+    width: auto;
+    min-height: auto;
+    padding-top: rem(50);
+
+    &__img {
+      margin-top: 0;
+    }
   }
 }
 
@@ -44,13 +59,18 @@
 .contact {
   &__item {
     // @include debug(#fff);
-    display: flex;
     padding-left: rem(20);
     margin-bottom: rem(10);
     color: #fff;
 
     a {
       color: inherit;
+    }
+  }
+
+  @include respond($width-tablet) {
+    &__list {
+      display: flex;
     }
   }
 }
@@ -65,6 +85,17 @@
     font-size: rem(18);
     line-height: 1.4;
   }
+
+  @include respond($width-tablet) {
+    &__items {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__name {
+      width: rem(53);
+    }
+  }
 }
 
 
@@ -76,6 +107,10 @@
   .info__tit {
     border-color: $color-dark;
   }
+
+  @include respond($width-tablet) {
+    width: auto;
+  }
 }
 
 .career {
@@ -83,15 +118,12 @@
   line-height: 1.4;
 
   &__item {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: rem(20);
-  }
+    border-bottom: 1px solid $color-gray;
 
-  &__date,
-  &__desc {
-    // @include debug;
-    flex: 1 0 auto;
+    &:last-child {
+      border-bottom-width: 0;
+    }
   }
 
   &__date {
@@ -129,5 +161,28 @@
   &__link {
     display: inline-block;
     margin-left: rem(10);
+  }
+
+  @include respond($width-mobile) {
+    &__item {
+      padding-left: rem(20);
+    }
+
+    &__project li {
+      margin-bottom: rem(25);
+    }
+
+    &__txt {
+      display: block;
+    }
+
+    &__link {
+      margin-left: 0;
+      margin-top: rem(10);
+
+      &:nth-of-type(2) {
+        margin-left: rem(10);
+      }
+    }
   }
 }
