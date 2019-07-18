@@ -94,8 +94,7 @@ new Vue({
           }
         ]
       }
-    ],
-    project: []
+    ]
   },
   methods: {
     createImg(skill) {

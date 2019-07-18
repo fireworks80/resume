@@ -1,15 +1,15 @@
 .wrap {
   display: flex;
   max-width: 960px;
-  min-height: 100%;
-  margin: {
-    left: auto;
-    right: auto;
-  }
+  margin: rem(30) auto;
+  padding-bottom: rem(30);
+  box-shadow: 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,64,67,.16);
+  // background-color: $color-primary;
 
   @include respond($width-tablet) {
     display: block;
-    padding-bottom: rem(100);
+    margin: 0;
+    // padding-bottom: rem(100);
   }
 }
 // info =============================================================
@@ -18,8 +18,8 @@
   width: 30%;
   min-height: 100%;
   padding-bottom: rem(30);
-  color: #fff;
-  background-color: $color-dark;
+  // color: #fff;
+  // background-color: $color-dark;
 
   &__img {
     // @include debug;
@@ -61,10 +61,10 @@
     // @include debug(#fff);
     padding-left: rem(20);
     margin-bottom: rem(10);
-    color: #fff;
+    // color: #fff;
 
     a {
-      color: inherit;
+      // color: inherit;
     }
   }
 
@@ -184,5 +184,15 @@
         margin-left: rem(10);
       }
     }
+  }
+}
+
+.about {
+  .column__desc {
+    font-size: rem(12);
+  }
+
+  p {
+    margin-bottom: rem(10);
   }
 }
