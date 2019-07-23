@@ -75,6 +75,18 @@
             </ol>
           </dd>
         </dl>
+        <dl class="column portfolio">
+          <dt class="column__tit">PORTFOLIO</dt>
+          <dd class="column__desc portfolio__column">
+            <figure class="project" v-for="portfolio in portfolios">
+              <img :src="createImg('portfolio/' + portfolio.img)" alt="">
+              <figcaption class="project__con">
+                <strong class="project__tit">{{portfolio.title}}</strong>
+                <p class="project__desc">{{portfolio.description}}</p>
+              </figcaption>
+            </figure>
+          </dd>
+        </dl>
         <dl class="column about">
           <dt class="column__tit">ABOUT ME</dt>
           <dd class="column__desc">
