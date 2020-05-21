@@ -21,9 +21,20 @@ new Vue({
     ],
     careers: [
       {
-        date: '2015.4 - ',
+        date: '2019.9.2 - ',
+        company: '오픈소스컨설팅',
+        work: '웹퍼블리싱,ui 개발',
+        projects: [
+          {
+            title: '자사 제품 사이트',
+            url: 'https://www.play-ce.io/'
+          }
+        ]
+      },
+      {
+        date: '2015.4 - 2019.8.30',
         company: '펜타클',
-        work: '웹퍼블리싱, 인터렉티브 웹개발, 프론트엔드',
+        work: '웹퍼블리싱, 인터렉티브 웹개발',
         projects: [
           {
             title: '폭스바겐 아테온 마이크로 사이트 퍼블리싱, UI 인터렉션',
