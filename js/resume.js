@@ -26,8 +26,20 @@ new Vue({
         work: '웹퍼블리싱,ui 개발',
         projects: [
           {
-            title: '자사 제품 사이트',
+            title: '자사 제품 사이트 제작',
             url: 'https://www.play-ce.io/'
+          },
+          {
+            title: '자사 솔루션 고도화',
+            url: ''
+          },
+          {
+            title: '중랑구 IOT 고도화',
+            url: 'https://smart.jungnang.go.kr/front/user/main'
+          },
+          {
+            title: 'jira / confluence addon flexible user ui개발',
+            url: 'https://marketplace.atlassian.com/apps/1220252/flexible-user-license-for-confluence?hosting=datacenter&tab=overview'
           }
         ]
       },
